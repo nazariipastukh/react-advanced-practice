@@ -1,4 +1,4 @@
-import {RickFetch} from "../components/rickAndMortyFetch";
+import {RickFetch} from "../components";
 
 export const RickFetchPage = () => {
     return (
