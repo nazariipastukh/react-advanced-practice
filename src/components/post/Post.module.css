@@ -1,0 +1,19 @@
+.card {
+    width: calc(17vw - 6px);
+    background-color: lavender;
+    border-radius: 20px;
+    margin: 14px;
+    padding: 10px 10px 50px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+button {
+    width: 4vw;
+    height: 3vh;
+    position: absolute;
+    bottom: 2vh
+}
