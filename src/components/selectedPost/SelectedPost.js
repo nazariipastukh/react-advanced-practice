@@ -1,7 +1,7 @@
 import styles from '../post/Post.module.css'
 
-export const SelectedPost = ({selected, handleSelect}) => {
-    const {id, title, body} = selected
+export const SelectedPost = ({selectedPost, handleSelect}) => {
+    const {id, title, body} = selectedPost
 
     return (
         <div className={styles.card}>
@@ -9,7 +9,7 @@ export const SelectedPost = ({selected, handleSelect}) => {
             <p>{title}</p>
             <h4>{body}</h4>
 
-            <button onClick={() => handleSelect()}> Hide</button>
+            <button onClick={() => handleSelect(null)}> Hide</button>
         </div>
     );
 };

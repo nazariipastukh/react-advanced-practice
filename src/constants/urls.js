@@ -4,7 +4,7 @@ const posts = '/posts'
 
 const endpoints = {
     base: posts,
-    // byId: (id) => `${posts}/${id}`
+    byId: (id) => `${posts}/${id}`
 }
 
 export {

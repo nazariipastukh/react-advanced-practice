@@ -7,11 +7,12 @@ import {SelectedPost} from "../selectedPost";
 
 export const Posts = () => {
     const [posts, setPosts] = useState([])
-    const [selected, setSelected] = useState(null)
+    const [selectedPost, setSelectedPost] = useState(null)
 
     const handleSelect = (postId) => {
-        const selectedPost = posts.find(post => post.id === postId)
-        setSelected(selectedPost)
+        postId === null ?
+            setSelectedPost(null) :
+            postsService.getById(postId).then(({data}) => setSelectedPost(data))
     }
 
     useEffect(() => {
@@ -21,7 +22,7 @@ export const Posts = () => {
     return (
         <div>
             {
-                selected && <SelectedPost selected={selected} handleSelect={handleSelect}/>
+                selectedPost && <SelectedPost selectedPost={selectedPost} handleSelect={handleSelect}/>
             }
             <div className={styles.wrapper}>
                 {
