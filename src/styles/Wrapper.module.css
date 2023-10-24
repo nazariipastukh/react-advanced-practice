@@ -1,0 +1,7 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    margin: 1vh;
+    border-radius: 15px;
+}

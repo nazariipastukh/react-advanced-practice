@@ -1,0 +1,13 @@
+.card {
+    width: calc(15vw - 17px);
+    min-height: 5vh;
+    background-color: lavender;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
