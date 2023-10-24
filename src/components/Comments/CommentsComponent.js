@@ -12,13 +12,9 @@ export const CommentsComponent = () => {
         commentsService.getComments().then(({data}) => setComments(data))
     }, [])
 
-    const handleAddComment = (comment) => {
-        setComments([...comments.reverse(), comment])
-    }
-
     return (
         <div>
-            <CommentsForm handleAddComment={handleAddComment}/>
+            <CommentsForm setComments={setComments}/>
 
             <div className={styles.wrapper}>
                 {

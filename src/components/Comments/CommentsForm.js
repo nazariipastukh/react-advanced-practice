@@ -4,15 +4,15 @@ import {useForm} from "react-hook-form";
 import {commentsService} from "../../services";
 import styles from '../../styles/Form.module.css'
 
-export const CommentsForm = ({handleAddComment}) => {
+export const CommentsForm = ({setComments}) => {
     const {register, handleSubmit, reset} = useForm()
     const [createdComment, setCreatedComment] = useState(null)
 
     const onSubmit = async (comment) => {
-        await commentsService.postComment(comment)
-        handleAddComment(comment)
+        const {data} = await commentsService.postComment(comment)
+        setComments(prevState => [...prevState.reverse(), data])
 
-        comment && setCreatedComment(comment)
+        setCreatedComment(comment)
         reset()
     }
 

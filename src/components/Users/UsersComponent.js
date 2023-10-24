@@ -12,14 +12,9 @@ export const UsersComponent = () => {
         usersService.getUsers().then(({data}) => setUsers(data))
     }, [])
 
-    const handleAddUser = (user) => {
-        setUsers([...users.reverse(), user])
-        console.log(user)
-    }
-
     return (
         <div>
-            <UsersForm handleAddUser={handleAddUser}/>
+            <UsersForm setUsers={setUsers}/>
 
             <div className={styles.wrapper}>
                 {

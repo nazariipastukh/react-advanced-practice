@@ -1,18 +1,18 @@
-import {useState} from "react";
 import {useForm} from "react-hook-form";
 
 import {usersService} from "../../services";
 import styles from '../../styles/Form.module.css'
+import {useState} from "react";
 
-export const UsersForm = ({handleAddUser}) => {
+export const UsersForm = ({setUsers}) => {
     const {register, handleSubmit, reset} = useForm()
     const [createdUser, setCreatedUser] = useState(null)
 
     const onSubmit = async (user) => {
-        await usersService.postUser(user)
-        handleAddUser(user)
+        const {data} = await usersService.postUser(user)
+        setUsers(prevState => [...prevState.reverse(), data])
 
-        user && setCreatedUser(user)
+        setCreatedUser(user)
         reset()
     }
 
