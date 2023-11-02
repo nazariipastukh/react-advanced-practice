@@ -1,0 +1,9 @@
+.character {
+    border: 1px black solid;
+    text-align: center;
+}
+
+.character img {
+    max-width: 50vw;
+    max-height: 50vh;
+}

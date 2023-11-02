@@ -1,0 +1,16 @@
+.episodesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    margin: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 5vw;
+    height: 4vh
+}
