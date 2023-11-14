@@ -11,7 +11,7 @@ export const CarsComponent = () => {
     const {cars, trigger} = useSelector(state => state.cars)
 
     useEffect(() => {
-        carService.getCars().then(data => dispatch(carActions.setCars(data)))
+        carService.getCars().then(({data}) => dispatch(carActions.setCars(data)))
     }, [dispatch, trigger])
 
     return (

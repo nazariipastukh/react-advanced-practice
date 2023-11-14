@@ -30,8 +30,8 @@ export const CarForm = () => {
 
     const update = async (car) => {
         await carService.updateCar(carForUpdate.id, car)
-        dispatch(carActions.setTrigger())
         dispatch(carActions.setCarForUpdate(null))
+        dispatch(carActions.setTrigger())
         reset()
     }
 

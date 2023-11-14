@@ -4,7 +4,6 @@ const initialState = {
     cars: [],
     trigger: false,
     carForUpdate: null,
-    deleteId: null,
 }
 
 const carsSlice = createSlice({
@@ -12,19 +11,13 @@ const carsSlice = createSlice({
     initialState,
     reducers: {
         setCars: (state, action) => {
-            const {data} = action.payload
-            state.cars = data
+            state.cars = action.payload
         },
         setTrigger: (state) => {
             state.trigger = (prev => !prev)
         },
         setCarForUpdate: (state, action) => {
-            const {car} = action.payload || {};
-            state.carForUpdate = car;
-        },
-        setDeleteId: (state, action) => {
-            const {car} = action.payload || {}
-            state.deleteId = car.id
+            state.carForUpdate = action.payload;
         }
     }
 })

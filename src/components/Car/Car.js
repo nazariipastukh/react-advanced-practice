@@ -10,7 +10,7 @@ export const Car = ({car}) => {
     const dispatch = useDispatch()
 
     const handleUpdateClick = () => {
-        dispatch(carActions.setCarForUpdate({car}));
+        dispatch(carActions.setCarForUpdate(car));
     };
 
     const deleteCar = async () => {
