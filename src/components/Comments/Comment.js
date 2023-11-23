@@ -2,20 +2,20 @@ import {Component} from "react";
 
 import styles from '../../styles/Card.module.css'
 
-class User extends Component {
+class Comment extends Component {
     render() {
-        const {name, username, id} = this.props.user
+        const { postId,name, body, id} = this.props.comment
 
         return (
             <div className={styles.card}>
-                <p>{id}</p>
-                <p>{username}</p>
+                <p>{`Post: ${postId} User: ${id}`}</p>
                 <p>{name}</p>
+                <p>{body}</p>
             </div>
         )
     }
 }
 
 export {
-    User
+    Comment
 }

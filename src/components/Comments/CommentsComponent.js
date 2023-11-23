@@ -1,26 +1,26 @@
 import {Component} from "react";
 
 import {jsonService} from "../../services";
-import {User} from "./User";
+import {Comment} from "./Comment";
 import styles from '../../styles/Wrapper.module.css'
 
-class UsersComponent extends Component {
+class CommentsComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: []
+            comments: []
         }
     }
 
     componentDidMount() {
-        jsonService.getAllUsers().then(({data}) => this.setState({users: data}))
+        jsonService.getAllComments().then(({data}) => this.setState({comments: data}))
     }
 
     render() {
         return (
             <div className={styles.wrapper}>
                 {
-                    this.state.users.map(user => <User user={user} key={user.id}/>)
+                    this.state.comments.map(comment => <Comment comment={comment} key={comment.id}/>)
                 }
             </div>
         )
@@ -28,5 +28,5 @@ class UsersComponent extends Component {
 }
 
 export {
-    UsersComponent
+    CommentsComponent
 }

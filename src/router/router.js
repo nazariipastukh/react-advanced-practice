@@ -1,7 +1,7 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {MainLayout} from "../layouts";
-import {CarsPage, PostsPage, UsersPage} from "../pages";
+import {CarsPage, PostsPage, CommentsPage} from "../pages";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
                 element: <CarsPage/>
             },
             {
-                path: '/users',
-                element: <UsersPage/>
+                path: '/comments',
+                element: <CommentsPage/>
             },
             {
                 path: '/posts',

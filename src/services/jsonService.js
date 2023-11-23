@@ -6,8 +6,8 @@ class JsonService {
         return jsonApiService.get(urls.posts)
     }
 
-    getAllUsers() {
-        return jsonApiService.get(urls.users)
+    getAllComments() {
+        return jsonApiService.get(urls.comments)
     }
 }
 

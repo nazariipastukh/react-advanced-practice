@@ -2,12 +2,12 @@ const carsURL = 'http://owu.linkpc.net/carsAPI/v1'
 const jsonURL = 'https://jsonplaceholder.typicode.com'
 
 const cars = '/cars'
-const users = '/users'
+const comments = '/comments'
 const posts = '/posts'
 
 const urls = {
     cars,
-    users,
+    comments,
     posts
 }
 
